@@ -1,0 +1,274 @@
+/* https://codepen.io/alexfelderean/pen/wvmgeMG */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url("https://use.typekit.net/cqh4jjc.css");
+
+/* Google Font Import - Poppins */
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'omnes-pro', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+	/* font-family: 'Poppins', sans-serif; */
+}
+
+body {
+	min-height: 100vh;
+  height: 100%;
+  overflow: auto;
+	background-color: #FAFAFA;
+	transition: all 0.3s ease;
+}
+
+::selection {
+	background-color: #695cfe;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* ALL ELEMENTS FOR LEFT MENU */
+#left {
+  position: fixed;
+  padding: 50px 50px;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 320px;
+  background-color: #FAFAFA;
+  z-index: 5;
+}
+
+#left header img{
+  width: 85%;
+}
+
+#left header #subname{
+  font-size: 14pt;
+  margin-left: 20px;
+}
+
+#left header #subname::before {
+  content: ">";
+}
+
+#left header #subname::after {
+  content: "|";
+  -webkit-animation: subnameblink 1s infinite;
+}
+
+@keyframes subnameblink {
+  50% {opacity: 0;}
+	0%, 100% {opacity: 1;}
+}
+
+#left .links{
+  padding-top: 30px;
+}
+
+#left .links li{
+  list-style: none;
+  padding: 5px 0px;
+}
+
+
+
+
+
+
+
+
+
+/* ALL ELEMENTS FOR RIGHT */
+#right {
+	margin-top: 55px;
+	margin-left: 320px;
+	margin-right: 50px;
+	width: 100% - 220px;
+  height:100%;
+  opacity: var(--right-opacity, 0);
+  transition: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+#right #intro{
+  width: 850px;
+  /* position:absolute; */
+  opacity: 1;
+}
+
+#right hr{
+  height: 1px;
+  border-width: 0;
+  width: 900px;
+  background-color: #222;
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+
+#right #projects table td{
+  width:300px;
+  height:300px;
+}
+
+#right #projects table img{
+  object-fit: cover;
+}
+
+
+#projects{
+  width: 900px;
+  /* table-layout: fixed; */
+  /* text-align: center; */
+  position: relative;
+  opacity: 1;
+  /* z-index: var(--project-index, -3); */
+}
+
+#submit{
+  cursor: pointer;
+}
+
+.icons li{
+  list-style: none;
+  height: 60px;
+  width: 400px;
+}
+
+#flop-bottom{
+  margin-top: 150px;
+}
+
+.icons img{
+  width: 100%;
+}
+
+
+.table-spacer{
+	width: 50px;
+}
+
+.big-image{
+	width: 400px;
+}
+
+nav{
+  /* overflow-y:hidden; */
+}
+
+table, td {
+	/* border: 1px solid; */
+	vertical-align: top;
+}
+
+/* td {
+	width: 200px;
+	vertical-align: top;
+} */
+
+table img{
+	width:100%;
+	display: block;
+}
+
+h1{
+	font-size: 14pt;
+}
+
+#intro a{
+	font-size: 12pt;
+	color: #666;
+}
+
+
+
+#projects h2{
+  text-align: center;
+}
+
+#projects table{
+  margin-top: 50px;
+  border-spacing: 0px;
+}
+#projects li{
+  list-style: none;
+  /* margin: 5px; */
+}
+
+
+
+/* CSS Bubbles */
+/* .bubble {
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.25;
+  z-index: -1;
+
+} */
+/* .size1 {
+  width:100px;
+  height:100px;
+}
+.size2 {
+  width:200px;
+  height:200px;
+}
+.size3 {
+  width:300px;
+  height:300px;
+}
+.size4 {
+  width:400px;
+  height:400px;
+}
+.white {
+  background-color: #ededed;
+}
+.blue {
+  background-color: #5799a9;
+}
+.pink {
+  background-color: #e86d65;
+}
+.orange {
+  background-color: #e59e70;
+}
+.purple {
+  background-color: #8c5e7a;
+}
+.green {
+  background-color: #1d7f59;
+} */
+
+/* Bubble positions */
+/* #b0-0 {
+  left: 200px;
+  top: calc(-1*var(--offset, 0px) + 900px);
+  /* left:340px;
+} */
+/* #b0-1 {
+  top: calc(-3*var(--offset, 0px) + 1850px);
+  left:670px;
+} */
+/* #b0-2 {
+  top: calc(-1.5*var(--offset, 0px) + 1000px);
+  left:820px;
+} */
+/* #b0-3 {
+  top: calc(-2*var(--offset, 0px) + 1050px);
+  left:1020px;
+} */
