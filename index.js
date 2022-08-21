@@ -1,5 +1,5 @@
 var subtextToBeTyped = [" university student ", " computer scientist ", " software engineer "];
-var index = 0, typingName = true, subtextIndex = 0, isAdding = true, timeSinceLoad = 0;
+var index = 0, typingName = true, subtextIndex = 0, isAdding = true, timeSinceLoad = 0, projectHidden = 1;
 // window.addEventListener('scroll', function () {
 //
 // });
@@ -27,16 +27,18 @@ function delay (URL) {
 //     event.preventDefault();
 // }
 
-// window.onscroll = function (e) {
-//   // document.documentElement.style.setProperty("--back-color", "blue");
-//   document.documentElement.style.setProperty("--offset", window.pageYOffset+"px");
-//
-//   if(window.pageYOffset < 50){
-//     console.log("dude");
-//   }
-//
-//   console.log(window.pageYOffset);
-// }
+window.onscroll = function (e) {
+  // document.documentElement.style.setProperty("--back-color", "blue");
+  // document.documentElement.style.setProperty("--offset", window.pageYOffset+"px");
+
+  if(projectHidden && window.pageYOffset > 135){
+    document.documentElement.style.setProperty("--project-opacity", 1);
+    projectHidden = 0;
+    console.log("dude");
+  }
+
+  console.log(window.pageYOffset);
+}
 
 window.onload = function(){
   setTimeout( function () {
